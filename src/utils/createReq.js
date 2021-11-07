@@ -1,6 +1,5 @@
 export default async function createReq({ query, method, content, id }) {
-  const baseURL = 'https://ra-http-crud.herokuapp.com/';
-  // const baseURL = 'http://localhost:7777/';
+  const baseURL = 'http://localhost:7777/';
   const requestURL = method === 'DELETE' ? baseURL + `${id}` : baseURL + query;
 
   const request = await fetch(requestURL, {
